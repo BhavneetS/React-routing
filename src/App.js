@@ -30,13 +30,17 @@ The older version actually defined all the routes with the help of Componenbts a
 */
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/root',
     element: <RootLayout/>,
     errorElement: <Error />,
     children: [
-      {path: '/', element: <HomePage />},
-      {path: '/products', element :<Products />},
-      {path:'/products/:productId', element: <ProductDetails/>}
+      /* 
+        Paths starting with "/" are absoulte paths i.e., path matches from the end of domain.
+        By removing the '/' the path is now relative to the parent path
+      */
+      {path: '', element: <HomePage />},
+      {path: 'products', element :<Products />},
+      {path:'products/:productId', element: <ProductDetails/>}
     ]
   }
 ])

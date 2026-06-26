@@ -1,5 +1,10 @@
+import { Link } from "react-router-dom";
+
 export default function Products() {
     return (
-        <h1>Products Page</h1>
+        <>
+            <h1>Products Page</h1>
+            <Link to="product1">Product-1</Link>
+        </>
     )
 }

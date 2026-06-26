@@ -11,8 +11,8 @@ export default function Navigation() {
                         As "/" is a subset of "/products", both routes will be marked as active when the /products route is Selected. 
                         In order to avoid this, we can use the "end" attribute that makes sure that the route is marked as active only if the end of the current route matches the path.
                     */}
-                    <li><NavLink to="/" className={({isActive})=>(isActive ? classes.active : undefined)} end>Home</NavLink></li>
-                    <li><NavLink to="/products" className={({isActive})=>(isActive ? classes.active : undefined)}>Products</NavLink></li>
+                    <li><NavLink to="" className={({isActive})=>(isActive ? classes.active : undefined)} end>Home</NavLink></li>
+                    <li><NavLink to="products" className={({isActive})=>(isActive ? classes.active : undefined)}>Products</NavLink></li>
                 </ul>
             </nav>
         </header>
